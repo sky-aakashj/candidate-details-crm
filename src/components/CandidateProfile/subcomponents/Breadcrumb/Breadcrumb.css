@@ -1,0 +1,51 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  font-weight: 590;
+  font-size: 13px;
+  height: 56px;
+  justify-content: space-between;
+  border-right: 1px solid var(--N300);
+  border-bottom: 1px solid var(--N300);
+}
+
+.breadcrumb-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+.breadcrumb-left span:first-child {
+  color: #1f5fac;
+}
+
+.breadcrumb-left i {
+  color: #1f5fac;
+  font-size: 24px;
+}
+.candidate-name {
+  color: #495057;
+}
+
+.candidate-id {
+  color: #666;
+  margin-left: 10px;
+}
+
+.breadcrumb-right {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+}
+
+.breadcrumb-right button {
+  padding: 6px 12px;
+  color: #343a40;
+  border: 1px solid var(--Netural---500, #ced4da);
+  background: white;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+}

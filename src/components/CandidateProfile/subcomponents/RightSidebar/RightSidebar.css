@@ -1,0 +1,25 @@
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+  background: var(--White, #ffffff);
+  border-left: 1px solid var(--Netural---200, #f1f3f5);
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #e6f1ff;
+  color: var(--Blue---300, #2570ca);
+}
+.icon-button i {
+  font-size: 15px;
+}
