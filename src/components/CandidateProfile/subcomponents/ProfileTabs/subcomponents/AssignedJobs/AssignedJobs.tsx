@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useSelector } from "react-redux";
 import type { Candidate } from "../../../../../../types/candidate";
@@ -11,7 +12,6 @@ const AssignedJobs: React.FC<AssignedJobsProps> = ({ candidate }) => {
   const { assignedJobs, loading, error } = useSelector(
     (state: any) => state.candidate
   );
-  console.log("assignedJobs", assignedJobs);
 
   if (loading) {
     return (

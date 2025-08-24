@@ -1,10 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import { useSelector } from "react-redux";
 import "./AllSection.css";
 
 const AllSection: React.FC = () => {
   const { allTabsData } = useSelector((state: any) => state.candidate);
-  console.log("allTabsData", allTabsData);
 
   return (
     <div className="notes-section">

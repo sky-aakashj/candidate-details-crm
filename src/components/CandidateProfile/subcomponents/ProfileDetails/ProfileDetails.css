@@ -32,41 +32,6 @@
   font-weight: 510;
 }
 
-.profile-header-footer {
-  padding: 15px;
-  border: 1px solid #e9ecef;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.contact-details,
-.additional-details {
-  display: flex;
-  gap: 20px;
-}
-.contact-item,
-.additional-details-item {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  align-items: center;
-}
-.contact-item i,
-.additional-details-item i {
-  font-size: 17px;
-  color: #656e7a;
-}
-.contact-details span {
-  font-size: 13px;
-  font-weight: 590;
-  color: var(--B700, #1f5fac);
-}
-.additional-details-item span {
-  font-size: 13px;
-  font-weight: 590;
-  color: var(--N900, #343a40);
-}
-
 @media (max-width: 768px) {
   .details-grid {
     grid-template-columns: 1fr;

@@ -2,9 +2,9 @@ import {
   FETCH_CANDIDATES_REQUEST,
   FETCH_CANDIDATES_SUCCESS,
   FETCH_CANDIDATES_FAILURE,
-  SET_IS_EDITING,
+  UPDATE_CANDIDATE,
 } from "../actionTypes";
-import { mockCandidateState } from "../../types/candidate";
+import { mockCandidateState, Candidate } from "../../types/candidate";
 import { mockFetchCandidate } from "../../services/mockData/mockCandidateApi";
 
 export const fetchCondidateRequest = () => ({
@@ -23,9 +23,12 @@ export const fetchCondidateFailure = (error: string) => ({
   payload: error,
 });
 
-export const setIsEditing = () => ({
-  type: SET_IS_EDITING,
-});
+export const updateCandidate = (updates: Partial<Candidate>) => {
+  return {
+    type: UPDATE_CANDIDATE,
+    payload: updates,
+  };
+};
 
 export const fetchCandidate = (candidateId: string) => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

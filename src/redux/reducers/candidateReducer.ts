@@ -2,7 +2,7 @@ import {
   FETCH_CANDIDATES_REQUEST,
   FETCH_CANDIDATES_SUCCESS,
   FETCH_CANDIDATES_FAILURE,
-  SET_IS_EDITING,
+  UPDATE_CANDIDATE,
 } from "../actionTypes";
 import type {
   Candidate,
@@ -42,15 +42,16 @@ interface FetchCandidatesFailureAction {
   payload: string;
 }
 
-interface SetIsEditingAction {
-  type: typeof SET_IS_EDITING;
+interface UpdateCondidateAction {
+  type: typeof UPDATE_CANDIDATE;
+  payload: Partial<Candidate>;
 }
 
 type CandidateActionTypes =
   | FetchCandidatesRequestAction
   | FetchCandidatesSuccessAction
   | FetchCandidatesFailureAction
-  | SetIsEditingAction;
+  | UpdateCondidateAction;
 
 export default function candidateReducer(
   state: CandidateState = initialState,
@@ -80,10 +81,12 @@ export default function candidateReducer(
         error: action.payload,
       };
 
-    case SET_IS_EDITING:
+    case UPDATE_CANDIDATE:
       return {
         ...state,
-        isEditing: !state.isEditing,
+        candidate: state.candidate
+          ? { ...state.candidate, ...action.payload }
+          : null,
       };
 
     default:

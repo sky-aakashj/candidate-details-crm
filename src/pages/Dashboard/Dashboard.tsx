@@ -8,7 +8,7 @@ import { fetchCandidate } from "../../redux/actions/candidateactions.ts";
 import userProfileImage from "../../assets/user-profile-illustration.png";
 import LeftNavigation from "../../components/LeftNavigation/LeftNavigation.tsx";
 import "./Dashboard.css";
-import rootReducer from "../../redux/reducers/rootReducer.ts"; // adjust path as needed
+import rootReducer from "../../redux/reducers/rootReducer.ts";
 import CandidateProfile from "../../components/CandidateProfile/CandidateProfile.tsx";
 
 interface DashboardProps {

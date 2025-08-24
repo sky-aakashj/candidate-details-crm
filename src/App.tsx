@@ -1,7 +1,6 @@
 import { Provider } from "react-redux";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import store from "./redux/store/store";
-import "./App.css";
 import { useState } from "react";
 
 function App() {
