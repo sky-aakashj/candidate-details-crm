@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function App() {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [candidateId, setCandidateId] = useState("231");
+  const [candidateId, _setCandidateId] = useState("231");
   return (
     <Provider store={store}>
       <Dashboard candidateId={candidateId} />
