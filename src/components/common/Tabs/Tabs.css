@@ -47,14 +47,56 @@
   text-align: center;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .tabs-header {
-    flex-wrap: wrap;
+  .tabs-container {
+    font-size: 14px;
+  }
+
+  .tabs-header-default,
+  .tabs-header-sidebar {
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .tabs-header-default::-webkit-scrollbar,
+  .tabs-header-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabs-header-sidebar {
+    justify-content: flex-start;
   }
 
   .tab {
-    padding: 8px 12px;
+    padding: 12px 16px;
     font-size: 12px;
+    min-width: fit-content;
+    flex-shrink: 0;
+  }
+
+  .tab-content {
+    min-height: 150px;
+  }
+
+  .default-tab-content {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tab {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+
+  .tab-content {
+    min-height: 120px;
+  }
+
+  .default-tab-content {
+    padding: 12px;
+    font-size: 13px;
   }
 }

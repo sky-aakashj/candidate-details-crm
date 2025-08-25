@@ -49,3 +49,100 @@
   cursor: pointer;
   box-shadow: 0px 1px 2px 0px #1018280d;
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .breadcrumb {
+    flex-direction: column;
+    height: auto;
+    min-height: 56px;
+    padding: 8px 0;
+    gap: 12px;
+  }
+
+  .breadcrumb-left {
+    padding: 8px 15px;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .breadcrumb-left span:first-child {
+    font-size: 12px;
+  }
+
+  .breadcrumb-left i {
+    font-size: 20px;
+  }
+
+  .candidate-name {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .candidate-id {
+    margin-left: 8px;
+    font-size: 11px;
+  }
+
+  .breadcrumb-right {
+    margin-left: 0;
+    padding: 8px 15px;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumb-right button {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-height: 36px;
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb {
+    gap: 8px;
+  }
+
+  .breadcrumb-left {
+    padding: 6px 12px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .breadcrumb-left span:first-child,
+  .candidate-name {
+    font-size: 11px;
+  }
+
+  .candidate-id {
+    font-size: 10px;
+    margin-left: 4px;
+  }
+
+  .breadcrumb-right {
+    padding: 6px 12px;
+    gap: 6px;
+  }
+
+  .breadcrumb-right button {
+    padding: 6px 10px;
+    font-size: 10px;
+    min-height: 32px;
+  }
+
+  .breadcrumb-right button:first-child {
+    order: 1;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .breadcrumb-right button:not(:first-child) {
+    order: 2;
+    flex: 1;
+    min-width: 70px;
+  }
+}

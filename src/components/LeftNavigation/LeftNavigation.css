@@ -9,6 +9,7 @@
   flex-direction: column;
   color: white;
   background: #143e6f;
+  transition: transform 0.3s ease;
 }
 
 .nav-header {
@@ -54,6 +55,31 @@
   border: 2px solid #1070ca;
 }
 
-/* Mobile adjustments */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .left-navigation {
+    transform: translateX(-100%);
+    z-index: 1000;
+  }
+
+  .left-navigation.mobile-open {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile overlay for navigation */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .nav-overlay.active {
+    display: block;
+  }
 }

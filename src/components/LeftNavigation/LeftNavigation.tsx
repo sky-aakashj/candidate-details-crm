@@ -10,6 +10,10 @@ interface NavigationItem {
   label: string;
   active: boolean;
 }
+interface LeftNavigationProps {
+  isOpen?: boolean;
+  onClose?: () => void;
+}
 
 const navigationItems: NavigationGroup[] = [
   {
@@ -34,10 +38,18 @@ const navigationItems: NavigationGroup[] = [
   },
 ];
 
-const LeftNavigation: React.FC = () => {
+const LeftNavigation: React.FC<LeftNavigationProps> = ({
+  isOpen = false,
+  onClose,
+}) => {
   return (
     <>
-      <nav className="left-navigation">
+      {/* Mobile overlay */}
+      <div
+        className={`nav-overlay ${isOpen ? "active" : ""}`}
+        onClick={onClose}
+      ></div>
+      <nav className={`left-navigation ${isOpen ? "mobile-open" : ""}`}>
         <div className="nav-header">
           <i className="bxr bx-grid-circle-diagonal-right nav-icon"></i>
         </div>

@@ -1,11 +1,19 @@
 import "./Header.css";
 import type { UserProfile } from "../../types/candidate";
 
-const Header = ({ user }: { user: UserProfile }) => {
+interface HeaderProps {
+  user: UserProfile;
+  onMenuToggle?: () => void;
+}
+
+const Header = ({ user, onMenuToggle }: HeaderProps) => {
   const { name, company, imageUrl } = user;
   return (
     <header className="header">
       <div className="header-left">
+        <button className="mobile-menu-toggle" onClick={onMenuToggle}>
+          <i className="bx bx-menu"></i>
+        </button>
         <span className="search-container">
           <i className="bx bx-search"></i>
           <input

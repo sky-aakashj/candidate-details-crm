@@ -173,20 +173,107 @@ input:checked + .slider:before {
 }
 
 @media (max-width: 768px) {
-  .job-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .job-meta,
-  .job-status {
-    margin-left: 0;
-    width: 100%;
+  .assigned-jobs {
+    padding: 12px;
   }
 
   .jobs-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 10px;
+  }
+  .jobs-header span {
+    text-align: center;
+  }
+
+  .jobs-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .job-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .job-info-section {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .job-meta {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .job-status {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .view-files-btn,
+  .status-badge,
+  .toggle-switch {
+    margin-top: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .assigned-jobs {
+    padding: 10px;
+  }
+
+  .jobs-header {
+    gap: 14px;
+  }
+
+  .jobs-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .assign-btn,
+  .view-all-btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 12px;
+  }
+
+  .job-item {
+    padding: 12px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .job-info-section {
+    justify-content: center;
+  }
+
+  .job-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .job-status {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .view-files-btn {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .status-badge {
+    align-self: center;
   }
 }

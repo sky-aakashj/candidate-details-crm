@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { ThunkDispatch } from "redux-thunk";
 import { useDispatch } from "react-redux";
 import type { AnyAction } from "redux";
@@ -18,10 +18,20 @@ type RootState = ReturnType<typeof rootReducer>;
 
 const Dashboard: React.FC<DashboardProps> = ({ candidateId }) => {
   const dispatch: ThunkDispatch<RootState, unknown, AnyAction> = useDispatch();
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
+
   const user: UserProfile = {
     name: "Phyllis Yang",
     company: "Silicon Links Inc",
     imageUrl: userProfileImage,
+  };
+
+  const handleMenuToggle = () => {
+    setIsMobileNavOpen(!isMobileNavOpen);
+  };
+
+  const handleNavClose = () => {
+    setIsMobileNavOpen(false);
   };
 
   useEffect(() => {
@@ -30,11 +40,11 @@ const Dashboard: React.FC<DashboardProps> = ({ candidateId }) => {
 
   return (
     <>
-      <LeftNavigation />
+      <LeftNavigation isOpen={isMobileNavOpen} onClose={handleNavClose} />
 
       <div className="main-content-wrapper">
         <div className="app">
-          <Header user={user} />
+          <Header user={user} onMenuToggle={handleMenuToggle} />
           <main className="main-content">
             <CandidateProfile />
           </main>

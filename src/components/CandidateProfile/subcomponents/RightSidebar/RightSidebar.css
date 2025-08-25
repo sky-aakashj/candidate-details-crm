@@ -23,3 +23,11 @@
 .icon-button i {
   font-size: 15px;
 }
+
+@media screen and (max-width: 1024px) {
+  .icon-group {
+    justify-content: center;
+    border-left: none;
+    border-top: 1px solid var(--Netural---200, #f1f3f5);
+  }
+}

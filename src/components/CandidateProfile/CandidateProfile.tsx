@@ -55,11 +55,12 @@ const CandidateProfile: React.FC = () => {
           candidate={candidate}
         />
       </div>
-
-      <RightSidebar
-        activeRightTab={activeRightTab}
-        onRightTabChange={setActiveRightTab}
-      />
+      <div className="right-wrapper">
+        <RightSidebar
+          activeRightTab={activeRightTab}
+          onRightTabChange={setActiveRightTab}
+        />
+      </div>
 
       <EditModal
         isOpen={isEditModalOpen}
