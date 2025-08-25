@@ -19,10 +19,8 @@ const CandidateProfile: React.FC = () => {
   const { candidate, loading, error } = useSelector(
     (state: any) => state.candidate
   );
-  console.log("Candidate from Redux store:", candidate);
 
   const handleEditSave = (updatedCandidate: Candidate) => {
-    console.log("Updated candidate:", updatedCandidate);
     dispatch(updateCandidate(updatedCandidate));
     setIsEditModalOpen(false);
   };
